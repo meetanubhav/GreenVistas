@@ -1,0 +1,46 @@
+.contactPill{
+  margin-top: 5%;
+}
+.fa-phone{
+   transform: rotate(103deg);
+}
+.godrejImg{
+  width: 8rem;
+}
+.offer-div{
+  background: linear-gradient(0deg, rgb(31 11 13) 10%, #17a2b8 100%);
+  box-shadow: 0 0 10px 4px #25252547;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: block;
+  font-family: muli;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin: 10px auto 0px;
+  outline: 0px;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.line-bold{
+  font-size: xxx-large;
+}
+.amenities-head{
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  width: 20rem;
+  height: 9rem;
+  font-size: 2rem;
+  padding: 3%;
+}
+.iframe-map{
+  width: -webkit-fill-available;
+  height: 18.5rem;
+}
+.amenities-title{
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    width: 14rem;
+    height: 5rem;
+    font-size: 2rem;
+    padding: 4%;
+}

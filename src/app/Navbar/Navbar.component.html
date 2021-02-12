@@ -1,0 +1,307 @@
+<!-- NavBar -->
+<nav class="navbar navbar-expand-lg navbar-light">
+  <!-- <a class="navbar-brand" href="#"> -->
+  <img src="./assets/images/godrej-logo.svg" width="50" height="50" class="d-inline-block align-top" alt="logo">
+  <!-- </a> -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="#">Price</a>
+      <a class="nav-item nav-link" href="#">Master & Floor Plans</a>
+      <a class="nav-item nav-link" href="#">Amenities</a>
+      <a class="nav-item nav-link" href="#">Gallery</a>
+      <a class="nav-item nav-link" href="#">Location</a>
+      <a class="nav-item nav-link" href="#">Live Tour</a>
+      <a class="nav-item nav-link" href="#">Book a Site Visit</a>
+      <a class="nav-item nav-link" href="#">Brochure</a>
+    </div>
+    <div class="nav-item nav-link float-right">
+      <h5 class="border border-info text-info rounded-pill contactPill  text-center py-2 px-2
+                    shadow bg-white rounded">
+        <i class="fas fa-phone"></i> {{contactNumber}}
+      </h5>
+    </div>
+  </div>
+</nav>
+
+<!-- Section 1 Home -->
+<section>
+  <div class="text-uppercase text-center">
+    <h3 class="text-info">
+      A 40-hectrae township
+    </h3>
+    <h6>
+      nested amidst nature
+    </h6>
+  </div>
+  <div class="row mt-2">
+    <div class="col-sm-12 col-md-7">
+      <div class="m-3">
+        <ngb-carousel *ngIf="images">
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img [src]="images[0]" alt="Random first slide">
+            </div>
+            <div class="carousel-caption">
+              <h3>First slide label</h3>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </div>
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img [src]="images[1]" alt="Random second slide">
+            </div>
+            <div class="carousel-caption">
+              <h3>Second slide label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img [src]="images[2]" alt="Random third slide">
+            </div>
+            <div class="carousel-caption">
+              <h3>Third slide label</h3>
+              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            </div>
+          </ng-template>
+        </ngb-carousel>
+      </div>
+      <div class="text-center">
+        <div class="row">
+          <div class="col-sm-0 col-md-2"></div>
+          <div class="col-sm-12 col-md-8">
+            <!-- <h6 class="mt-3">
+              LIMITED PERIOD OFFER
+              PAY 1% & BOOK NOW
+            </h6>
+            <span>
+              <img class="img-icon mx-auto d-block godrejImg" alt="Godrej Logo"
+                src="https://godrej-mahalunge-riverhills.com/wp-content/uploads/god.svg">
+            </span>
+            <p class="text-center p-3">
+              PRE-BOOK WITH REFUNDABLE EOI
+              <br>
+              OF ₹ 50,000/- & GET DISCOUNT OF 2 LACS*
+              <br>
+              0 STAMP DUTY & GST | NO FLOOR RISE
+              <br>
+              BENEFITS OF LOWEST INTEREST RATE*
+            </p> -->
+          </div>
+          <div class="col-sm-0 col-md-2"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-5">
+      <div class="container">
+        <div class="offer-div mb-3">
+          <h6 class="mt-3">
+            LIMITED PERIOD OFFER
+            PAY 1% & BOOK NOW
+          </h6>
+          <span>
+            <img class="img-icon mx-auto d-block godrejImg" alt="Godrej Logo" src="./assets/images/godrej-logo.svg">
+          </span>
+          <p class="text-center p-3">
+            PRE-BOOK WITH REFUNDABLE EOI
+            <br>
+            OF ₹ 50,000/- & GET DISCOUNT OF 2 LACS*
+            <br>
+            0 STAMP DUTY & GST | NO FLOOR RISE
+            <br>
+            BENEFITS OF LOWEST INTEREST RATE*
+          </p>
+        </div>
+        <h3 class="text-info text-uppercase text-center">
+          LIFE OF YOUR DREAMS
+        </h3>
+        <h3 class="text-info text-uppercase text-center">
+          ____________________________________
+        </h3>
+        <h3 class="text-info text-center">
+          Starting at ₹ 42.5 Lacs (All-Inclusive)
+        </h3>
+        <h4 class="text-info text-uppercase text-center mt-5">
+          COVE OF CONVENIENCE
+        </h4>
+        <div class=" text-info text-center">
+          <span class="line-bold">______</span>
+          <button class="btn btn-info btn-md mx-2">Enquire Now</button>
+          <span class="line-bold">_____</span>
+        </div>
+      </div>
+      <div class="form container">
+        <!-- <form>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputName">Name</label>
+              <input type="text" class="form-control" id="inputName" placeholder="Name">
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="inputMobile">Email</label>
+              <input type="text" class="form-control" id="inputMobile" placeholder="Mobile No.">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail4">Email</label>
+            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+          </div>
+        </form> -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Section 2 -->
+<section>
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+      <div class="container jumbotron mx-5">
+        <h3 class="text-center text-info">GODREJ RIVERHILLS OVERVIEW</h3>
+        <hr>
+        <p class="container text-justify">
+          Welcome to Godrej Green Cove, a landmark gracefully designed to offer you with a wholesome living experience.
+          Live a
+          blissful life and embrace its joyous moments in your very own cove of convenience. Transcend the comforts of
+          your
+          everyday life with a plethora of indulgences that offer the best of both; smart living and a convenient
+          lifestyle that
+          you wished for, all your life.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="container mx-5">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"> <span class="mr-4 text-info">➤</span> 8+ Acres Central Green Zone</li>
+          <li class="list-group-item"> <span class="mr-4 text-info">➤</span>Central Park, Spread Over 7.5 Acres</li>
+          <li class="list-group-item"> <span class="mr-4 text-info">➤</span>Riverfront Market Plaza</li>
+          <li class="list-group-item"> <span class="mr-4 text-info">➤</span>One of the largest Club in West Pune</li>
+          <li class="list-group-item"> <span class="mr-4 text-info">➤</span>700 Acres Mahalunge-Maan Hi-Tech city</li>
+          <li class="list-group-item"> <span class="mr-4 text-info">➤</span>Premium Master Club | Retail High Street
+          </li>
+          <li class="list-group-item"> <span class="mr-4 text-info">➤</span>Magnificent Clubhouse – Township & Sector
+            Level</li>
+          <li class="list-group-item"> <span class="mr-4 text-info">➤</span>100+ Acre Acre Integrated Smart City</li>
+          <li class="list-group-item"> <span class="mr-4 text-info">➤</span>Surrounded by Hills, Lush Greenery Banks of
+            Mula River</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<hr>
+<!-- Section 3 -->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="container amenities-head text-center bg-info text-white">
+        <span>AMENITIES</span>
+      </div>
+    </div>
+    <div class="row my-4">
+      <div class="col md-3">
+        <h4 class="text-white bg-info amenities-title">INDOOR</h4>
+      </div>
+      <div class="col md-3">
+        <img class="rounded mx-auto d-block godrejImg" alt="Godrej Logo" src="./assets/images/indoor1.jpg">
+      </div>
+      <div class="col md-3">
+        <img class="rounded mx-auto d-block godrejImg" alt="Godrej Logo" src="./assets/images/indoor2.jpg">
+      </div>
+      <div class="col md-3">
+        <img class="rounded mx-auto d-block godrejImg" alt="Godrej Logo" src="./assets/images/indoor1.jpg">
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col md-3">
+        <img class="rounded mx-auto d-block godrejImg" alt="Godrej Logo" src="./assets/images/outdoor1.jpg">
+      </div>
+      <div class="col md-3">
+        <img class="rounded mx-auto d-block godrejImg" alt="Godrej Logo" src="./assets/images/outdoor2.jpg">
+      </div>
+      <div class="col md-3">
+        <img class="rounded mx-auto d-block godrejImg" alt="Godrej Logo" src="./assets/images/outdoor1.jpg">
+      </div>
+      <div class="col md-3">
+        <h4 class="text-white bg-info amenities-title">OUTDOOR</h4>
+      </div>
+    </div>
+  </div>
+</section>
+<hr>
+<!-- Section Area and pricing -->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <h3 class="text-info text-center my-4">AREA & PRICING</h3>
+        <table class="table table-bordered border-info table-responsive">
+          <thead>
+            <tr>
+              <th scope="col">Residences</th>
+              <th scope="col">Carpet Area</th>
+              <th scope="col">Garden Facing
+              (All inclusive)</th>
+              <th scope="col">Hill Facing
+              (All inclusive)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1 BHK</th>
+              <td>300 sq. ft.</td>
+              <td>₹ 42.50 Lacs</td>
+              <td>₹ 61.90 Lacs</td>
+            </tr>
+            <tr>
+              <th scope="row">2 BHK</th>
+              <td>550 sq. ft.</td>
+              <td>₹ 59.10 Lacs</td>
+              <td>₹ 71.90 Lacs</td>
+            </tr>
+            <tr>
+              <th scope="row">3 BHK</th>
+              <td>800 sq. ft.</td>
+              <td>₹ 74.25 Lacs</td>
+              <td>₹ 57.20 Lacs</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <h3 class="text-info text-center my-4">LOCATE US</h3>
+        <iframe class="iframe-map"
+          src="https://www.google.com/maps?q=Godrej%20Green%20Cove%20at%20%23Riverhills%2C%20Mahalunge%2C%20Pune%2C%20Nande%20-%20Balewadi%20Rd%2C%20Mahalunge%2C%20Pune%2C%20Maharashtra%20411045%2C%20India&z=14&t=&ie=UTF8&output=embed"
+          ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <h3 class="text-info text-center">ABOUT GODREJ PROPERTIES</h3>
+    <p class="text-justify">
+      Godrej Properties Limited is a real estate company with its head office in Mumbai, India.[5]A subsidiary of Godrej
+      Industries Ltd, the company was established in 1990 under the leadership of Adi Godrej.The company is currently
+      developing projects that are estimated to cover more than 89.7 million sq uare feet. Currently, Godrej Properties
+      Limited(GPL) is listed on the Bombay Stock Exchange (BSE) and the National Stock Exchange (NSE). Godrej Properties
+      Limited was founded as Sea Breeze Constructions and Investments Private Limited[11] on 8 February 1985. In accordance
+      with a special resolution of the shareholders in the year 1990, the company’s name was changed to Godrej Properties and
+      Investments Private Limited. Subsequently, the name of the company was changed to Godrej Properties and Investments
+      Limited and finally, to Godrej Properties Limited at a general meeting on 23 November 2004. From safes that withstood
+      fires better than international competitors', to one of the world's first soaps from vegetable oil, and the ballot boxes
+      for independent India's first general election, the group has a proud tradition of making meaningful products and
+      building businesses that serve the country's interests. We have always focused on people and the planet along with the
+      profits. Approximately 23% of the promoter stake in the Godrej Group, is owned by philanthropic trusts that work on
+      environmental, educational, and health care issues in India. We are also bringing together our passion and purpose to
+      make a difference through our Good & Green strategy of shared values to create a more employable Indian workforce, build
+      a greener India and innovate for ‘Good' and ‘Green' products.
+    </p>
+  </div>
+</section>
