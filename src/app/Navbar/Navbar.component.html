@@ -1,5 +1,5 @@
 <!-- NavBar -->
-<nav class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white mb-5">
   <!-- <a class="navbar-brand" href="#"> -->
   <img src="./assets/images/godrej-logo.svg" width="50" height="50" class="d-inline-block align-top" alt="logo">
   <!-- </a> -->
@@ -10,14 +10,14 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="#">Price</a>
-      <a class="nav-item nav-link" href="#">Master & Floor Plans</a>
-      <a class="nav-item nav-link" href="#">Amenities</a>
-      <a class="nav-item nav-link" href="#">Gallery</a>
-      <a class="nav-item nav-link" href="#">Location</a>
-      <a class="nav-item nav-link" href="#">Live Tour</a>
+      <a class="nav-item nav-link" href="#price">Price</a>
+      <a class="nav-item nav-link" href="#mafplans">Master & Floor Plans</a>
+      <a class="nav-item nav-link" href="#amenities">Amenities</a>
+      <a class="nav-item nav-link" href="#gallery">Gallery</a>
+      <a class="nav-item nav-link" href="#location">Location</a>
+      <a class="nav-item nav-link" href="#livetour">Live Tour</a>
       <a class="nav-item nav-link" href="#">Book a Site Visit</a>
-      <a class="nav-item nav-link" href="#">Brochure</a>
+      <a class="nav-item nav-link" href="#aboutus">About US</a>
     </div>
     <div class="nav-item nav-link float-right">
       <h5 class="border border-info text-info rounded-pill contactPill  text-center py-2 px-2
@@ -29,7 +29,7 @@
 </nav>
 
 <!-- Section 1 Home -->
-<section>
+<section class="sec1">
   <div class="text-uppercase text-center">
     <h3 class="text-info">
       A 40-hectrae township
@@ -161,9 +161,9 @@
 <!-- Section 2 -->
 <section>
   <div class="row">
-    <div class="col-sm-12 col-md-6">
-      <div class="container jumbotron mx-5">
-        <h3 class="text-center text-info">GODREJ RIVERHILLS OVERVIEW</h3>
+    <div class="col-sm-12 col-md-8">
+      <div class="container mx-5">
+        <h3 class="text-center text-info my-4">GODREJ RIVERHILLS OVERVIEW</h3>
         <hr>
         <p class="container text-justify">
           Welcome to Godrej Green Cove, a landmark gracefully designed to offer you with a wholesome living experience.
@@ -176,8 +176,8 @@
         </p>
       </div>
     </div>
-    <div class="col-md-6">
-      <div class="container mx-5">
+    <div class="col-md-4">
+      <div class="mx-5 my-5">
         <ul class="list-group list-group-flush">
           <li class="list-group-item"> <span class="mr-4 text-info">➤</span> 8+ Acres Central Green Zone</li>
           <li class="list-group-item"> <span class="mr-4 text-info">➤</span>Central Park, Spread Over 7.5 Acres</li>
@@ -198,7 +198,7 @@
 </section>
 <hr>
 <!-- Section 3 -->
-<section>
+<section id="amenities">
   <div class="container">
     <div class="row">
       <div class="container amenities-head text-center bg-info text-white">
@@ -237,20 +237,20 @@
 </section>
 <hr>
 <!-- Section Area and pricing -->
-<section>
+<section id="price">
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-md-6">
         <h3 class="text-info text-center my-4">AREA & PRICING</h3>
-        <table class="table table-bordered border-info table-responsive">
+        <table class="table table-bordered table-striped border-info table-responsive">
           <thead>
             <tr>
               <th scope="col">Residences</th>
               <th scope="col">Carpet Area</th>
               <th scope="col">Garden Facing
-              (All inclusive)</th>
+                (All inclusive)</th>
               <th scope="col">Hill Facing
-              (All inclusive)</th>
+                (All inclusive)</th>
             </tr>
           </thead>
           <tbody>
@@ -275,16 +275,71 @@
           </tbody>
         </table>
       </div>
-      <div class="col-sm-12 col-md-6">
-        <h3 class="text-info text-center my-4">LOCATE US</h3>
-        <iframe class="iframe-map"
-          src="https://www.google.com/maps?q=Godrej%20Green%20Cove%20at%20%23Riverhills%2C%20Mahalunge%2C%20Pune%2C%20Nande%20-%20Balewadi%20Rd%2C%20Mahalunge%2C%20Pune%2C%20Maharashtra%20411045%2C%20India&z=14&t=&ie=UTF8&output=embed"
-          ></iframe>
+      <div class="col-sm-12 col-md-6 my-4">
+        <h3 class="text-info text-center">
+          PRICE BREAKUP
+        </h3>
       </div>
     </div>
   </div>
 </section>
-<section>
+<hr>
+<!-- Gallery -->
+<section id="amenities">
+  <div class="container">
+    <h3 class="text-info text-center">GALLERY</h3>
+    <div class="row">
+      <div class="col-sm-12 col-md-4">
+        <img class="gallery-img" src="./assets/images/gallery1.jpg" alt="gallery-image-1">
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <img class="gallery-img" src="./assets/images/gallery2.jpg" alt="gallery-image-2">
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <img class="gallery-img" src="./assets/images/gallery3.jpg" alt="gallery-image-3">
+      </div>
+    </div>
+  </div>
+</section>
+<!--  Floor Plans -->
+<section id="mafplans">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-5">
+        <h3 class="text-info text-center my-4">MASTER PLAN</h3>
+        <img class="img-thumbnail plan-img custom-border" src="./assets/images/master-plan.jpg" alt="master-plan">
+      </div>
+      <div class="col-sm-12 col-md-7">
+        <h3 class="text-info text-center my-4">UNIT PLANS</h3>
+        <i class="fas fa-arrow-left text-info fa-2x mr-2" (click)="changeUnitPlanImg()"></i>
+        <img class="img-thumbnail plan-img custom-border text-center" [src]="unitPlanImhURL" alt="unit-plan-1">
+        <i class="fas fa-arrow-right text-info fa-2x ml-2" (click)="changeUnitPlanImg()"></i>
+      </div>
+    </div>
+  </div>
+</section>
+<hr>
+<!-- Locate Us -->
+<section id="location">
+  <div class="container">
+    <h3 class="text-info text-center my-4">LOCATE US</h3>
+    <iframe class="iframe-map custom-border"
+      src="https://www.google.com/maps?q=Godrej%20Green%20Cove%20at%20%23Riverhills%2C%20Mahalunge%2C%20Pune%2C%20Nande%20-%20Balewadi%20Rd%2C%20Mahalunge%2C%20Pune%2C%20Maharashtra%20411045%2C%20India&z=14&t=&ie=UTF8&output=embed"></iframe>
+  </div>
+</section>
+
+<!-- Virtual Tour -->
+<section class="livetour">
+  <div>
+    <h3 class="text-info text-center">
+      VIRTUAL SITE TOUR
+    </h3>
+    <iframe class="iframe-video mx-5 px-5" [src]='safeURL' frameborder="0" allowfullscreen></iframe>
+  </div>
+</section>
+
+<!-- About Us -->
+<section id="aboutus">
   <div class="container">
     <h3 class="text-info text-center">ABOUT GODREJ PROPERTIES</h3>
     <p class="text-justify">
@@ -292,16 +347,25 @@
       Industries Ltd, the company was established in 1990 under the leadership of Adi Godrej.The company is currently
       developing projects that are estimated to cover more than 89.7 million sq uare feet. Currently, Godrej Properties
       Limited(GPL) is listed on the Bombay Stock Exchange (BSE) and the National Stock Exchange (NSE). Godrej Properties
-      Limited was founded as Sea Breeze Constructions and Investments Private Limited[11] on 8 February 1985. In accordance
-      with a special resolution of the shareholders in the year 1990, the company’s name was changed to Godrej Properties and
-      Investments Private Limited. Subsequently, the name of the company was changed to Godrej Properties and Investments
-      Limited and finally, to Godrej Properties Limited at a general meeting on 23 November 2004. From safes that withstood
-      fires better than international competitors', to one of the world's first soaps from vegetable oil, and the ballot boxes
+      Limited was founded as Sea Breeze Constructions and Investments Private Limited[11] on 8 February 1985. In
+      accordance
+      with a special resolution of the shareholders in the year 1990, the company’s name was changed to Godrej
+      Properties and
+      Investments Private Limited. Subsequently, the name of the company was changed to Godrej Properties and
+      Investments
+      Limited and finally, to Godrej Properties Limited at a general meeting on 23 November 2004. From safes that
+      withstood
+      fires better than international competitors', to one of the world's first soaps from vegetable oil, and the ballot
+      boxes
       for independent India's first general election, the group has a proud tradition of making meaningful products and
-      building businesses that serve the country's interests. We have always focused on people and the planet along with the
-      profits. Approximately 23% of the promoter stake in the Godrej Group, is owned by philanthropic trusts that work on
-      environmental, educational, and health care issues in India. We are also bringing together our passion and purpose to
-      make a difference through our Good & Green strategy of shared values to create a more employable Indian workforce, build
+      building businesses that serve the country's interests. We have always focused on people and the planet along with
+      the
+      profits. Approximately 23% of the promoter stake in the Godrej Group, is owned by philanthropic trusts that work
+      on
+      environmental, educational, and health care issues in India. We are also bringing together our passion and purpose
+      to
+      make a difference through our Good & Green strategy of shared values to create a more employable Indian workforce,
+      build
       a greener India and innovate for ‘Good' and ‘Green' products.
     </p>
   </div>

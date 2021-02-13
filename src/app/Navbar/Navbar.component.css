@@ -1,6 +1,9 @@
 .contactPill{
   margin-top: 5%;
 }
+nav{
+  background-color: rgba(125, 125, 125, 0.8);
+}
 .fa-phone{
    transform: rotate(103deg);
 }
@@ -36,6 +39,7 @@
 .iframe-map{
   width: -webkit-fill-available;
   height: 18.5rem;
+  box-shadow: 0 0 10px 4px #25252547;
 }
 .amenities-title{
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
@@ -43,4 +47,33 @@
     height: 5rem;
     font-size: 2rem;
     padding: 4%;
+}
+.iframe-video{
+  width : -webkit-fill-available;
+  height: 30rem;
+
+
+}
+.plan-img{
+  width: 30rem;
+  height: 20rem;
+}
+.custom-border{
+  border-style: solid;
+  border-color: #17a2b8;
+  border-width: 6px;
+  border-radius: 9px;
+  box-shadow: 0 0 10px 4px #25252547;
+}
+.sec1{
+  margin-top: 5.5rem;
+}
+.gallery-img{
+  width: inherit;
+}
+.list-group-item:nth-child(even) {
+  background: rgba(0,0,0,0.1);
+}
+.list-group-item:nth-child(odd) {
+  background: rgba(128,128,128,0.4);
 }
