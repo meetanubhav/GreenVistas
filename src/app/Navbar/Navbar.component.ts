@@ -1,15 +1,27 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, HostListener, OnInit } from '@angular/core';
-// import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
 
 @Component({
   selector: 'app-Navbar',
   templateUrl: './Navbar.component.html',
-  styleUrls: ['./Navbar.component.css']
+  styleUrls: ['./Navbar.component.css'],
+  providers: [NgbModalConfig, NgbModal]
 })
 export class NavbarComponent implements OnInit {
 
-  images = [1044, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
+  enquiryForm = this.fb.group({
+    Name: ['', [Validators.required, Validators.pattern("^[a-zA-Z]+$")]],
+    email: ['', [Validators.required, Validators.pattern("[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$")]],
+    phoneNumber: ['', [Validators.required, Validators.pattern("^[0-9]{10}$")]],
+  });
+  isNotValid: boolean = false;
+
+  // images = [1044, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
+  images = [1, 2, 3].map((n) => `./assets/images/cal/${n}.jpg`);
   contactNumber: string = "+91 98765 43210";
   godrejImagePath = "./ass";
   safeURL: SafeResourceUrl;
@@ -17,18 +29,33 @@ export class NavbarComponent implements OnInit {
   unitPlanImhURL = "./assets/images/unit-plan-" + this.currentImgIndex + ".jpg";
 
   constructor(
-    private _sanitizer: DomSanitizer
-  ) {
-    this.safeURL = this._sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/tlLb_rqNnBU");
+    private _sanitizer: DomSanitizer,
+    private fb: FormBuilder,
+    private http: HttpClient,
+    config: NgbModalConfig, private modalService: NgbModal) {
+    this.safeURL = this._sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/tlLb_rqNnBU"); // customize default values of modals used by this component tree
+    config.backdrop = 'static';
+    config.keyboard = false;
   }
 
-  // ContactForm = this.fb.group({
-  //   Name: ['', [Validators.required]],
-  //   Mobile: ['', [Validators.required]],
-  //   Email: ['', [Validators.required]]
 
-  // });
   ngOnInit() {
+  }
+  open(content: any) {
+    this.modalService.open(content);
+  }
+  onSubmit() {
+    // console.log(this.enquiryForm);
+    if(this.enquiryForm.valid){
+      var postFormData = {
+        projectId: 2387,
+        name: this.enquiryForm.get('Name')?.value,
+        email: this.enquiryForm.get('email')?.value,
+        phoneNumber: this.enquiryForm.get('phoneNumber')?.value,
+      }
+      this.http.post('https://godrej-greenvista.co/project_inquiry.php', postFormData).subscribe(data => {
+      })
+    }
   }
   changeUnitPlanImg() {
     if (this.currentImgIndex == 0) {

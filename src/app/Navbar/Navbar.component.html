@@ -40,7 +40,7 @@
   </div>
   <div class="row mt-2">
     <div class="col-sm-12 col-md-7">
-      <div class="m-3">
+      <div class="m-3 custom-border">
         <ngb-carousel *ngIf="images">
           <ng-template ngbSlide>
             <div class="picsum-img-wrapper">
@@ -131,7 +131,7 @@
         </h4>
         <div class=" text-info text-center">
           <span class="line-bold">______</span>
-          <button class="btn btn-info btn-md mx-2">Enquire Now</button>
+          <button class="btn btn-info btn-md mx-2" (click)="open(content)">Enquire Now</button>
           <span class="line-bold">_____</span>
         </div>
       </div>
@@ -200,37 +200,43 @@
 <!-- Section 3 -->
 <section id="amenities">
   <div class="container">
-    <div class="row">
+    <!-- <div class="row">
       <div class="container amenities-head text-center bg-info text-white">
         <span>AMENITIES</span>
       </div>
-    </div>
-    <div class="row my-4">
-      <div class="col md-3">
-        <h4 class="text-white bg-info amenities-title">INDOOR</h4>
+    </div> -->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="row my-4">
+          <div class="col md-3">
+            <h4 class="text-white bg-info amenities-title">INDOOR</h4>
+          </div>
+          <div class="col md-3">
+            <img class="rounded mx-auto d-block godrejImg" alt="Godrej Logo" src="./assets/images/indoor1.jpg">
+          </div>
+          <div class="col md-3">
+            <img class="rounded mx-auto d-block godrejImg" alt="Godrej Logo" src="./assets/images/indoor2.jpg">
+          </div>
+          <div class="col md-3">
+            <img class="rounded mx-auto d-block godrejImg" alt="Godrej Logo" src="./assets/images/indoor1.jpg">
+          </div>
+        </div>
       </div>
-      <div class="col md-3">
-        <img class="rounded mx-auto d-block godrejImg" alt="Godrej Logo" src="./assets/images/indoor1.jpg">
-      </div>
-      <div class="col md-3">
-        <img class="rounded mx-auto d-block godrejImg" alt="Godrej Logo" src="./assets/images/indoor2.jpg">
-      </div>
-      <div class="col md-3">
-        <img class="rounded mx-auto d-block godrejImg" alt="Godrej Logo" src="./assets/images/indoor1.jpg">
-      </div>
-    </div>
-    <div class="row mt-5">
-      <div class="col md-3">
-        <img class="rounded mx-auto d-block godrejImg" alt="Godrej Logo" src="./assets/images/outdoor1.jpg">
-      </div>
-      <div class="col md-3">
-        <img class="rounded mx-auto d-block godrejImg" alt="Godrej Logo" src="./assets/images/outdoor2.jpg">
-      </div>
-      <div class="col md-3">
-        <img class="rounded mx-auto d-block godrejImg" alt="Godrej Logo" src="./assets/images/outdoor1.jpg">
-      </div>
-      <div class="col md-3">
-        <h4 class="text-white bg-info amenities-title">OUTDOOR</h4>
+      <div class="col-md-6">
+        <div class="row mt-5">
+          <div class="col md-3">
+            <img class="rounded mx-auto d-block godrejImg" alt="Godrej Logo" src="./assets/images/outdoor1.jpg">
+          </div>
+          <div class="col md-3">
+            <img class="rounded mx-auto d-block godrejImg" alt="Godrej Logo" src="./assets/images/outdoor2.jpg">
+          </div>
+          <div class="col md-3">
+            <img class="rounded mx-auto d-block godrejImg" alt="Godrej Logo" src="./assets/images/outdoor1.jpg">
+          </div>
+          <div class="col md-3">
+            <h4 class="text-white bg-info amenities-title">OUTDOOR</h4>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -238,11 +244,11 @@
 <hr>
 <!-- Section Area and pricing -->
 <section id="price">
-  <div class="container">
+  <div class="mx-5">
     <div class="row">
       <div class="col-sm-12 col-md-6">
         <h3 class="text-info text-center my-4">AREA & PRICING</h3>
-        <table class="table table-bordered table-striped border-info table-responsive">
+        <table class="table table-bordered table-striped border-info table-responsive custom-border">
           <thead>
             <tr>
               <th scope="col">Residences</th>
@@ -251,6 +257,9 @@
                 (All inclusive)</th>
               <th scope="col">Hill Facing
                 (All inclusive)</th>
+              <th scope="col">
+
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -259,18 +268,21 @@
               <td>300 sq. ft.</td>
               <td>₹ 42.50 Lacs</td>
               <td>₹ 61.90 Lacs</td>
+              <td><button class="btn btn-info">Get Price Sheet</button></td>
             </tr>
             <tr>
               <th scope="row">2 BHK</th>
               <td>550 sq. ft.</td>
               <td>₹ 59.10 Lacs</td>
               <td>₹ 71.90 Lacs</td>
+              <td><button class="btn btn-info">Get Price Sheet</button></td>
             </tr>
             <tr>
               <th scope="row">3 BHK</th>
               <td>800 sq. ft.</td>
               <td>₹ 74.25 Lacs</td>
               <td>₹ 57.20 Lacs</td>
+              <td><button class="btn btn-info">Get Price Sheet</button></td>
             </tr>
           </tbody>
         </table>
@@ -279,6 +291,7 @@
         <h3 class="text-info text-center">
           PRICE BREAKUP
         </h3>
+        <img class="pricebreak-img custom-border mt-3" src="./assets/images/pricesheet.jpg" alt="price sheet">
       </div>
     </div>
   </div>
@@ -286,7 +299,7 @@
 <hr>
 <!-- Gallery -->
 <section id="amenities">
-  <div class="container">
+  <div class="mx-5">
     <h3 class="text-info text-center">GALLERY</h3>
     <div class="row">
       <div class="col-sm-12 col-md-4">
@@ -303,17 +316,25 @@
 </section>
 <!--  Floor Plans -->
 <section id="mafplans">
-  <div class="container">
+  <div class="mx-5">
     <div class="row">
-      <div class="col-sm-12 col-md-5">
+      <div class="col-sm-12 col-md-6">
         <h3 class="text-info text-center my-4">MASTER PLAN</h3>
         <img class="img-thumbnail plan-img custom-border" src="./assets/images/master-plan.jpg" alt="master-plan">
       </div>
-      <div class="col-sm-12 col-md-7">
+      <div class="col-sm-12 col-md-6">
         <h3 class="text-info text-center my-4">UNIT PLANS</h3>
-        <i class="fas fa-arrow-left text-info fa-2x mr-2" (click)="changeUnitPlanImg()"></i>
-        <img class="img-thumbnail plan-img custom-border text-center" [src]="unitPlanImhURL" alt="unit-plan-1">
-        <i class="fas fa-arrow-right text-info fa-2x ml-2" (click)="changeUnitPlanImg()"></i>
+        <div class="row">
+          <div class="col-md-1 aling-center">
+            <i class="fas fa-arrow-left text-info fa-2x mr-2 " (click)="changeUnitPlanImg()"></i>
+          </div>
+          <div class="col-md-8">
+            <img class="img-thumbnail plan-img custom-border text-center" [src]="unitPlanImhURL" alt="unit-plan-1">
+          </div>
+          <div class="col-md-1 aling-center">
+            <i class="fas fa-arrow-right text-info fa-2x ml-2" (click)="changeUnitPlanImg()"></i>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -327,11 +348,11 @@
       src="https://www.google.com/maps?q=Godrej%20Green%20Cove%20at%20%23Riverhills%2C%20Mahalunge%2C%20Pune%2C%20Nande%20-%20Balewadi%20Rd%2C%20Mahalunge%2C%20Pune%2C%20Maharashtra%20411045%2C%20India&z=14&t=&ie=UTF8&output=embed"></iframe>
   </div>
 </section>
-
+<hr>
 <!-- Virtual Tour -->
 <section class="livetour">
-  <div>
-    <h3 class="text-info text-center">
+  <div class="my-5">
+    <h3 class="text-info text-center my-2">
       VIRTUAL SITE TOUR
     </h3>
     <iframe class="iframe-video mx-5 px-5" [src]='safeURL' frameborder="0" allowfullscreen></iframe>
@@ -340,7 +361,7 @@
 
 <!-- About Us -->
 <section id="aboutus">
-  <div class="container">
+  <div class="mx-5">
     <h3 class="text-info text-center">ABOUT GODREJ PROPERTIES</h3>
     <p class="text-justify">
       Godrej Properties Limited is a real estate company with its head office in Mumbai, India.[5]A subsidiary of Godrej
@@ -370,3 +391,57 @@
     </p>
   </div>
 </section>
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header bg-info text-white">
+    <h4 class="modal-title" id="modal-basic-title">Hi there!</h4>
+    <button type="button" class="close text-danger" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="enquiryForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <div class="row">
+          <div class="col-sm-6 col-md-6">
+            <label class="myLabel" for="firstName">Name :</label><span class=" text-danger"> *</span>
+
+            <input type="text" formControlName="Name" class="form-control" name="firstName" placeholder="First Name" />
+            <div *ngIf="(enquiryForm.get('Name')?.invalid && enquiryForm.get('Name')?.touched) ||isNotValid">
+              <small class="text-danger" *ngIf="enquiryForm.get('Name')?.errors?.required">First Name is
+                required</small>
+              <small class="text-danger" *ngIf="enquiryForm.get('Name')?.errors?.pattern">Enter only alphabets.</small>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6">
+            <label class="myLabel" for="phoneNumber">Phone Number :</label><span class=" text-danger"> *</span>
+            <br>
+            <input type="text" formControlName="phoneNumber" class="form-control" name="phoneNumber"
+              placeholder="9xxxxxxxx0" maxlength="50" />
+            <div
+              *ngIf="(enquiryForm.get('phoneNumber')?.invalid && enquiryForm.get('phoneNumber')?.touched) ||isNotValid">
+              <small class="text-danger" *ngIf="enquiryForm.get('phoneNumber')?.errors?.required"> phoneNumber is
+                required</small>
+              <small class="text-danger" *ngIf="enquiryForm.get('phoneNumber')?.errors?.pattern">Format: "+91
+                9xxxxxxxx0" </small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="myLabel" for="email">E-mail :</label><span class=" text-danger"> *</span>
+        <br>
+        <input type="email" formControlName="email" class="form-control" name="email" placeholder="yourname@example.com"
+          maxlength="50" />
+        <div *ngIf="(enquiryForm.get('email')?.invalid && enquiryForm.get('email')?.touched) ||isNotValid">
+          <small class="text-danger" *ngIf="enquiryForm.get('email')?.errors?.required"> Email is required</small>
+          <small class="text-danger" *ngIf="enquiryForm.get('email')?.errors?.pattern">Format: "yourname@example.com"
+          </small>
+
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-outline-dark btn-info text-white" (click)="c('')">Save</button>
+      </div>
+    </form>
+  </div>
+</ng-template>

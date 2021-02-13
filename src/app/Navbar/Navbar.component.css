@@ -61,7 +61,7 @@ nav{
 .custom-border{
   border-style: solid;
   border-color: #17a2b8;
-  border-width: 6px;
+  border-width: 4px;
   border-radius: 9px;
   box-shadow: 0 0 10px 4px #25252547;
 }
@@ -70,10 +70,22 @@ nav{
 }
 .gallery-img{
   width: inherit;
+ -webkit-clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
 }
 .list-group-item:nth-child(even) {
   background: rgba(0,0,0,0.1);
 }
 .list-group-item:nth-child(odd) {
   background: rgba(128,128,128,0.4);
+}
+.pricebreak-img{
+  width: -webkit-fill-available;
+}
+.aling-center{
+  align-self: center;
+}
+.picsum-img-wrapper{
+  width: 50%;
+  max-height: 50%;
 }
