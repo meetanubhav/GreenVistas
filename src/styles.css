@@ -3,6 +3,21 @@ body{
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-  background-image: url(./assets/images/bg.svg)!important;
+  background-image: url(./assets/images/bg.webp)!important;
   background-attachment: fixed;
+}
+@media only screen and (max-width: 600px) {
+  body{
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  background-image: url(./assets/images/bg.webp)!important;
+  background-attachment: fixed;
+}
+}
+@media (max-width: 768px) {
+html, body {
+width: auto !important;
+overflow-x: hidden !important;
+}
 }
